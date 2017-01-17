@@ -2,8 +2,12 @@
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common LineageOS stuff.
+# Inherit common product files.
 $(call inherit-product, vendor/tipsy/config/common_full_phone.mk)
+$(call inherit-product, vendor/tipsy/config/caf_fw.mk)
+
+# Enhanced NFC
+$(call inherit-product, vendor/tipsy/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lge/bullhead/aosp_bullhead.mk)
